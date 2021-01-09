@@ -1,9 +1,11 @@
 """
+main
 """
 from hello import concat
-from hello.hello import VInt, Value
+from hello.hello import VInt, VStr
 
 n = VInt(10)
-s = Value('aaaa')
+s = VStr("aaaa")
 
-print(concat.ct(n, s))
+
+print(concat.pair(n, s))

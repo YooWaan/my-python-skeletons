@@ -2,41 +2,37 @@
 copy right
 
 """
-from abc import ABC, abstractmethod
 
-"""
-"""
-class MyABC(ABC):
-    def __init__(self):
-        pass
+from dataclasses import dataclass
+from typing import Protocol, TypeVar, Generic
 
-    """
-    """
-    @abstractmethod
+
+MyH = TypeVar("MyH")
+
+
+@dataclass
+class Hello(Generic[MyH]):
+    value: MyH
+
+
+class MyValue(Protocol):
+    """ MyValue """
+
     def value(self) -> str:
-        pass
+        ...
 
 
-class Value(MyABC):
+class VStr:
     def __init__(self, v: str):
-        super().__init__()
-        self._value = v
+        self._value = Hello[str](v)
 
     def value(self) -> str:
-        return self._value
+        return self._value.value
 
 
-class VInt(MyABC):
+class VInt:
     def __init__(self, v: int):
-        super().__init__()
-        self._value = v
+        self._value = Hello[int](v)
 
     def value(self) -> str:
-        return f"{self._value}"
-
-
-print("aaaaa")
-
-V = Value("aaa")
-
-print(V.value())
+        return f"{self._value.value}"
