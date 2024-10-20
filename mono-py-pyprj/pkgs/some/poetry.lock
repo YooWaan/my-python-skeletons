@@ -23,19 +23,6 @@ files = [
 ]
 
 [[package]]
-name = "one"
-version = "0.1.0"
-description = ""
-optional = false
-python-versions = "^3.12"
-files = []
-develop = true
-
-[package.source]
-type = "directory"
-url = "../../libs/one"
-
-[[package]]
 name = "packaging"
 version = "24.0"
 description = "Core utilities for Python packages"
@@ -84,4 +71,4 @@ dev = ["argcomplete", "attrs (>=19.2)", "hypothesis (>=3.56)", "mock", "pygments
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "91f1db951c52d3d111e39d44f2b6ff1a322336e67ee16ea59cf8b623e45bb634"
+content-hash = "1c254373091609fbbad7ac773128eb492d1e4333929ff47f104489b165df1806"
