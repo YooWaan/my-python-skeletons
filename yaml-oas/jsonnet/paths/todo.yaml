@@ -1,0 +1,21 @@
+/todos:
+    get:
+        summary: list of todo items
+        parameters:
+            - in: query
+              name: offset
+              schema:
+                type: integer
+            - in: query
+              name: limit
+              schema:
+                type: integer
+        responses:
+          "200":
+            description: Items
+            content:
+              application/json:
+                schema:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/TODO'
